@@ -8,6 +8,8 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  name: 'HhButton',
+  
   props: {
     disabled: {
       type: Boolean,
