@@ -1,16 +1,20 @@
 {
-  "name": "hh-components",
+  "name": "h-components",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npx vue-cli-service build --target lib --name h-components ./src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
   },
+  "main": "./dist/h-components.common.js",
+  "files": [ "dist/*"],
   "dependencies": {
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-knobs": "^6.3.0",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },

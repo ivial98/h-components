@@ -8,7 +8,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'HhButton',
+  name: 'HBtn',
   
   props: {
     disabled: {
@@ -20,7 +20,7 @@ export default defineComponent({
   emits:['click'],
 
   setup(props, context) {
-    const onClick = (event) => {
+    const onClick = (event: any) => {
       context.emit("click", event)
     } 
 

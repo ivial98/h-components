@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils'
-import HhButton from './HhButton.vue'
+import HBtn from './HBtn.vue'
 
-describe('HhButton.vue', () => {
+describe('HBtn.vue', () => {
   it('fires click event when clicked', async () => {
-    const wrapper = shallowMount(HhButton)
+    const wrapper = shallowMount(HBtn)
 
-    await wrapper.findComponent(HhButton).trigger('click');
+    await wrapper.findComponent(HBtn).trigger('click');
 
     const actual = wrapper.emitted()['click'];
 
@@ -13,11 +13,11 @@ describe('HhButton.vue', () => {
   })
 
   it('not fires click event when clicked if disabled', async () => {
-    const wrapper = shallowMount(HhButton)
+    const wrapper = shallowMount(HBtn)
 
     wrapper.setProps({disabled: true});
 
-    await wrapper.findComponent(HhButton).trigger('click');
+    await wrapper.findComponent(HBtn).trigger('click');
 
     const actual = wrapper.emitted()['click'];
 
