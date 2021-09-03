@@ -1,16 +1,16 @@
-import HBtn from './HBtn.vue'
+import HFooter from './HFooter.vue'
 import { withKnobs, boolean} from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 export default {
-    component: HBtn,
-    title: 'Components/HBtn',
+    component: HFooter,
+    title: 'Components/HFooter',
     decorators: [withKnobs]
   };
 
   export const regular = () => ({
-    components: { HBtn },
-    template: "<HBtn :disabled='disabled' @click='click'>Click me</HBtn>",
+    components: { HFooter },
+    template: "<HFooter/>",
     props: {
       disabled: {
         default: boolean('disabled', false)

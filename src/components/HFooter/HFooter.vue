@@ -1,15 +1,22 @@
 <template>
-  <button  class="btn btn-blue" :disabled="isDisabled" @click="onClick">
-    <slot></slot>
-  </button>
+  <footer>
+    <div>
+      <div><slot name="logo"></slot></div>
+      <div>{{ slogan }}</div>
+      <div>
+        <span>FB</span>
+        <span>LI</span> 
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'HBtn',
-  
+  name: "HFooter",
+
   props: {
     disabled: {
       type: Boolean,
@@ -17,17 +24,17 @@ export default defineComponent({
     },
   },
 
-  emits:['click'],
+  emits: ["click"],
 
   setup(props, context) {
     const onClick = (event: any) => {
-      context.emit("click", event)
-    } 
+      context.emit("click", event);
+    };
 
     return {
       isDisabled: props.disabled,
-      onClick
-    }
-  }
+      onClick,
+    };
+  },
 });
 </script>

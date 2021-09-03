@@ -1,7 +1,7 @@
 {
-  "name": "h-components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ivial98/h-components",
+  "version": "0.1.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npx vue-cli-service build --target lib --name h-components ./src/index.ts",
